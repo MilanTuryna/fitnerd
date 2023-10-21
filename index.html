@@ -19,7 +19,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
 </head>
 <body class="bg-[#efefef]">
 <header class="bg-[#2c7309] px-8">
-    <div class="flex justify-between items-stretch bg-[rgba(255,255,255,0.10)] px-4 text-white h-full">
+    <div class="hidden lg:flex justify-between items-stretch bg-[rgba(255,255,255,0.10)] px-4 text-white h-full">
         <div class="w-[22%] flex-grow py-2">
             <a href="">
                 <img src="img/wide-logo.png" style="width: 12em" alt="logo"/>
@@ -50,6 +50,13 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
             </a>
         </div>
     </div>
+    <div class="lg:hidden bg-[rgba(255,255,255,0.10)]">
+        <div class="w-[22%] flex-grow py-2">
+            <a href="">
+                <img src="img/wide-logo.png" style="width: 12em" alt="logo"/>
+            </a>
+        </div>
+    </div>
 </header>
 <div class="flex bg-white w-100 mx-8 flex-grow flex-items-grow flex-items-center flex-wrap">
     <div>
@@ -73,7 +80,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
 </div>
 <main class="mx-8 mt-6 bg-white">
     <div class="lg:grid lg:grid-cols-12">
-        <div class="col-span-8 grid grid-cols-12">
+        <div class="col-span-8 lg:grid grid-cols-12">
             <div class="col-span-8 p-6">
                 <article class="2xl:flex gap-x-6 mb-7">
                     <div class="mb-3 2xl:m-0">
@@ -237,12 +244,12 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
             <h1 class="text-3xl">Připnuté články</h1>
             <article class="flex lg:block xl:flex gap-x-6 mt-3 mb-6">
                 <div class="w-[33%] lg:w-auto">
-                    <div class="p-4 border">
+                    <a href="" class="block p-4 border">
                         <img src="" class="aspect-[4/3] w-full lg:w-[150px] lg:h-[112px]">
-                    </div>
+                    </a>
                 </div>
                 <div class="flex-grow mt-2">
-                    <h2 class="font-medium text-3xl"><a href=""> Problém konjugované periodizace</a></h2>
+                    <h2 class="font-medium text-3xl"><a href="" class="hover:underline"> Problém konjugované periodizace</a></h2>
                     <p class="mt-2">
                         Nadržená děcka a čuňata se nenachází pochopená. Trojnásobná čuňata neseděla, neboť jejich otrávení pánové budou se nacházet, ale ta střela a pochutina seděly.
                     </p>
@@ -250,12 +257,12 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
             </article>
             <article class="flex lg:block xl:flex gap-x-6 mt-3 mb-6">
                 <div class="w-[33%] lg:w-auto">
-                    <div class="p-4 border">
+                    <a href="" class="block p-4 border">
                         <img src="" class="aspect-[4/3] w-full lg:w-[150px] lg:h-[112px]">
-                    </div>
+                    </a>
                 </div>
                 <div class="flex-grow mt-2">
-                    <h2 class="font-medium text-3xl"><a href=""> Problém konjugované periodizace</a></h2>
+                    <h2 class="font-medium text-3xl"><a href="" class="hover:underline"> Problém konjugované periodizace</a></h2>
                     <p class="mt-2">
                         Nadržená děcka a čuňata se nenachází pochopená. Trojnásobná čuňata neseděla, neboť jejich otrávení pánové budou se nacházet, ale ta střela a pochutina seděly.
                     </p>
