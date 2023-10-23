@@ -14,69 +14,123 @@
     <link href="
 https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
 " rel="stylesheet">
-
-
 </head>
 <body class="bg-[#efefef]">
 <header class="bg-[#2c7309] px-8">
-    <div class="hidden lg:flex justify-between items-stretch bg-[rgba(255,255,255,0.10)] px-4 text-white h-full">
-        <div class="w-[22%] flex-grow py-2">
-            <a href="">
+    <div class="hidden md:flex flex-wrap justify-between items-stretch bg-[rgba(255,255,255,0.10)] px-4 pb-4 xl:pb-0 text-white h-full">
+        <div class="md:flex-shrink flex items-center gap-x-4">
+            <a href="" class="nav-link py-2">
                 <img src="img/wide-logo.png" style="width: 12em" alt="logo"/>
             </a>
+            <h2 class="text-2xl hidden 2xl:block">Trénink tvrdě a chytře</h2>
         </div>
-        <nav>
-            <ul class="flex justify-between h-full">
-                <li>
-                    <a href="" class="flex items-center nav-link px-5 h-full">Archiv článků</a>
-                </li>
-                <li>
-                    <a href="" class="flex items-center nav-link px-5 h-full">O webu</a>
-                </li>
-                <li>
-                    <a href="" class="flex items-center nav-link px-5 h-full">Diskuze</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="w-[22%] flex gap-x-4 flex-grow justify-end">
-            <label class="flex self-center">
-                <input type="search" placeholder="např. tréninková frekvence" class="border px-2 py-1 text-black rounded-[10px] shadow-sm">
-            </label>
-            <a href="" class="h-full flex items-center underline px-2 text-black bg-[#ffcb3b] hover:no-underline hover:bg-[#fad775]">
-                Stát se redaktorem
-            </a>
-            <a href="" class="flex items-center px-2 nav-link">
-                Přihlásit se
-            </a>
+        <div class="flex mb-4 flex-wrap lg:flex-nowrap lg:mb-0">
+            <nav class="px-4 pb-4 lg:pb-0">
+                <ul class="flex justify-between h-full">
+                    <li>
+                        <a href="" class="flex items-center nav-link px-5 py-3 h-full">Archiv článků</a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center nav-link px-5 py-3 h-full">O webu</a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center nav-link px-5 py-3 h-full">Diskuze</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="xl:w-[22%] flex gap-x-4 flex-grow justify-start px-4 lg:px-0 lg:justify-end">
+                <form class="flex self-center">
+                    <label class="flex self-center">
+                        <input type="search" placeholder="např. tréninková frekvence" class="border px-2 py-1 text-black rounded-l-[10px] shadow-sm">
+                        <button type="submit" class="rounded-r-[10px] bg-green-900 text-white text-center px-3 hover:bg-green-800 transition-[0.3s] focus:bg-green-700">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </label>
+                </form>
+                <a href="" class="h-full flex items-center underline px-2 text-black bg-[#ffcb3b] hover:no-underline hover:bg-[#fad775]">
+                    Stát se redaktorem
+                </a>
+                <a href="" class="flex items-center px-2 nav-link">
+                    Přihlásit se
+                </a>
+            </div>
         </div>
     </div>
-    <div class="lg:hidden bg-[rgba(255,255,255,0.10)]">
-        <div class="w-[22%] flex-grow py-2">
-            <a href="">
-                <img src="img/wide-logo.png" style="width: 12em" alt="logo"/>
-            </a>
+    <div class="md:hidden bg-[rgba(255,255,255,0.10)]">
+        <div class="flex justify-between">
+            <div class="w-[22%] flex-grow py-2">
+                <a href="">
+                    <img src="img/wide-logo.png" style="width: 12em" alt="logo"/>
+                </a>
+            </div>
+            <div class="">
+                <button class="flex items-center h-full">
+                    <i class="ri-menu-line text-white text-2xl pr-5 js--hamburger transition-[0.3s]" data-navigation="mobileNavigation"></i>
+                </button>
+            </div>
+            <div class="hidden sm:block">
+                <a href="" class="flex h-full text-white nav-link px-2 mr-2 items-center px-2 nav-link">
+                    Přihlásit se
+                </a>
+            </div>
+        </div>
+        <div id="mobileNavigation">
+            <nav class="px-4 py-2">
+                <ul class="text-gray-100">
+                    <li class="border-y bg-gray-500">
+                        <a href="" class="flex items-center nav-link px-5 py-2 h-full">Archiv článků</a>
+                    </li>
+                    <li class="border-b bg-gray-500">
+                        <a href="" class="flex items-center nav-link px-5 py-2 h-full">O webu</a>
+                    </li>
+                    <li class="border-b bg-gray-500">
+                        <a href="" class="flex items-center nav-link px-5 py-3 h-full">Diskuze</a>
+                    </li>
+                    <li class="border-b">
+                        <a href="" class="h-full flex items-center px-5 py-2 text-black bg-[#ffcb3b] hover:no-underline hover:bg-[#fad775]">
+                            Stát se redaktorem
+                        </a>
+                    </li>
+                    <li class="bg-[rgba(255,255,255,0.2)]">
+                        <a href="" class="flex items-center nav-link px-5 py-3 h-full">Přihlásit se</a>
+                    </li>
+                    <li class="pt-4 pb-2">
+                        <form class="flex self-center">
+                            <label class="flex self-center w-full">
+                                <input type="search" placeholder="např. tréninková frekvence" class="border px-2 py-1 flex-grow text-black rounded-l-[10px] shadow-sm">
+                                <button type="submit" class="rounded-r-[10px] bg-green-900 text-white text-center px-3 hover:bg-green-800 transition-[0.3s] focus:bg-green-700">
+                                    <i class="ri-search-line"></i>
+                                </button>
+                            </label>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
 <div class="flex bg-white w-100 mx-8 flex-grow flex-items-grow flex-items-center flex-wrap">
     <div>
-        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#7605AB] transition-[0.3s] hover:bg-[#7605AB] hover:text-white px-2">Vzpírání</a>
+        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#7605AB] transition-[0.3s] hover:bg-[#7605AB] hover:text-white px-2">Síla</a>
     </div>
     <div>
-        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#E6AF2E] transition-[0.3s] hover:bg-[#E6AF2E] px-2">Powerlifting</a>
+        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#E6AF2E] transition-[0.3s] hover:bg-[#E6AF2E] px-2">Hypertrofie</a>
     </div>
     <div>
-        <a href="" class="block h-full py-2 border-b-[7px] border-b-[#F05365] transition-[0.3s] hover:bg-[#F05365] px-2"> Kulturistika</a>
+        <a href="" class="block h-full py-2 border-b-[7px] border-b-[#F05365] transition-[0.3s] hover:bg-[#F05365] px-2">Vytrvalost</a>
     </div>
     <div class="py-2 border-b-[7px] border-b-[#4464AD] transition-[0.3s] hover:bg-[#4464AD]  hover:text-white px-2">
-        <a href="">Strongman</a>
+        <a href="">Rychlost</a>
     </div>
-    <div class="py-2 border-b-[7px] border-b-[#7D4600] hover:bg-[#7D4600] transition-[0.3s]  hover:text-white px-2 ">
-        <a href="">Armwrestling</a>
+    <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+        <a href="">Technika cviků</a>
     </div>
-    <div class="py-2  bg-[#fff8f8] border px-2">Technika cviků</div>
-    <div class="py-2  bg-[#fff8f8] border px-2">Studie</div>
-    <div class="py-2  bg-[#fff8f8] border px-2">Periodizace</div>
+    <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+        <a href="">Slovník</a>
+    </div>
+    <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+        <a href="">Ze světa</a>
+    </div>
 </div>
 <main class="mx-8 mt-6 bg-white">
     <div class="lg:grid lg:grid-cols-12">
@@ -90,7 +144,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
                     </div>
                     <div class="flex-grow">
                         <h2 class="font-medium text-3xl"><a href="" class="hover:underline"><i class="ri-pushpin-fill text-gray-500"></i> Problém konjugované periodizace</a></h2>
-                        <div class="flex items-center gap-2 mt-2">
+                        <div class="flex items-center flex-wrap  gap-2 mt-2">
                             <time class="text-gray-500">18. října 2023</time>
                             <div class="text-white bg-blue-500 px-1 rounded-sm">Strongman</div>
                             <div class="text-white bg-red-500 px-1 rounded-sm">Powerlifting</div>
@@ -120,7 +174,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
                     </div>
                     <div class="flex-grow">
                         <h2 class="font-medium text-3xl"><a href="" class="hover:underline"><i class="ri-pushpin-fill text-gray-500"></i> Problém konjugované periodizace</a></h2>
-                        <div class="flex items-center gap-2 mt-2">
+                        <div class="flex items-center flex-wrap gap-2 mt-2">
                             <time class="text-gray-500">18. října 2023</time>
                             <div class="text-white bg-blue-500 px-1 rounded-sm">Strongman</div>
                             <div class="text-white bg-red-500 px-1 rounded-sm">Powerlifting</div>
@@ -150,7 +204,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
                     </div>
                     <div class="flex-grow">
                         <h2 class="font-medium text-3xl"><a href="" class="hover:underline"><i class="ri-pushpin-fill text-gray-500"></i> Problém konjugované periodizace</a></h2>
-                        <div class="flex items-center gap-2 mt-2">
+                        <div class="flex items-center flex-wrap  gap-2 mt-2">
                             <time class="text-gray-500">18. října 2023</time>
                             <div class="text-white bg-blue-500 px-1 rounded-sm">Strongman</div>
                             <div class="text-white bg-red-500 px-1 rounded-sm">Powerlifting</div>
@@ -180,7 +234,7 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
                     </div>
                     <div class="flex-grow">
                         <h2 class="font-medium text-3xl"><a href="" class="hover:underline"><i class="ri-pushpin-fill text-gray-500"></i> Problém konjugované periodizace</a></h2>
-                        <div class="flex items-center gap-2 mt-2">
+                        <div class="flex items-center flex-wrap  gap-2 mt-2">
                             <time class="text-gray-500">18. října 2023</time>
                             <div class="text-white bg-blue-500 px-1 rounded-sm">Strongman</div>
                             <div class="text-white bg-red-500 px-1 rounded-sm">Powerlifting</div>
@@ -291,5 +345,54 @@ https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css
         </div>
     </div>
 </main>
+<footer class="mt-6 mx-8">
+    <div class="flex border-t bg-white w-100 flex-grow flex-items-grow flex-items-center flex-wrap">
+        <div>
+            <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#7605AB] transition-[0.3s] hover:bg-[#7605AB] hover:text-white px-2">Síla</a>
+        </div>
+        <div>
+            <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#E6AF2E] transition-[0.3s] hover:bg-[#E6AF2E] px-2">Hypertrofie</a>
+        </div>
+        <div>
+            <a href="" class="block h-full py-2 border-b-[7px] border-b-[#F05365] transition-[0.3s] hover:bg-[#F05365] px-2">Vytrvalost</a>
+        </div>
+        <div class="py-2 border-b-[7px] border-b-[#4464AD] transition-[0.3s] hover:bg-[#4464AD]  hover:text-white px-2">
+            <a href="">Rychlost</a>
+        </div>
+        <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+            <a href="">Technika cviků</a>
+        </div>
+        <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+            <a href="">Slovník</a>
+        </div>
+        <div class="py-2  bg-[#fff8f8] border px-2 nav-link-black transition-[0.3s]">
+            <a href="">Ze světa</a>
+        </div>
+    </div>
+    <div class="bg-zinc-300 p-4 text-center">
+        <div class="lg:flex justify-between">
+            <div class="flex-1 hidden xl:block"></div>
+            <div class="mb-4 lg:mb-0">
+                <div>
+                    Copyright © 2023 Fitnerd &bull; <a href="" class="underline hover:no-underline text-blue-800">Kontaktní údaje</a> &bull; <a href="" class="underline hover:no-underline text-blue-800">Naši redaktoři</a>
+                </div>
+                <p class="text-gray-700 text-sm">Publikování či šiření obsahu serveru Fitnerd je povoleno v případě dodržení <a href="" class="underline hover:no-underline text-blue-800">zásad pro sdílení obsahu</a>.</p>
+            </div>
+            <div class="flex-1 self-center flex justify-between lg:justify-normal flex-grow">
+                <div></div>
+                <form class="flex self-center lg:ml-auto ml-[0] w-full lg:max-w-[75%]">
+                    <label class="flex self-center w-full">
+                        <input type="search" placeholder="např. tréninková frekvence" class="border px-2 py-1 flex-grow text-black rounded-l-[10px] shadow-sm">
+                        <button type="submit" class="rounded-r-[10px] bg-green-900 text-white text-center px-3 hover:bg-green-800 transition-[0.3s] focus:bg-green-700">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </label>
+                </form>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/hamburger.js"></script>
 </body>
 </html>
