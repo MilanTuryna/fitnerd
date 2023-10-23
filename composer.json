@@ -1,0 +1,14 @@
+{
+  "name": "milanturyna/fitnerd",
+  "description": "Blog for fitness community (strength, hypertrophy, speed and endurance)",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "MilanTuryna",
+      "email": "milan@turyna.eu"
+    }
+  ],
+  "require": {
+  }
+}
