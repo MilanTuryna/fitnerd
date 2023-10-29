@@ -23,6 +23,7 @@ final class RouterFactory
             ->addRoute("/<page>", "")
             ->addRoute("/clanky/<article>")
             ->addRoute("/prihlaseni")
+            ->addRoute("/prihlaseni/odhlasit-se")
             ->addRoute("/zapomenute-heslo")
             ->addRoute("/registrace")
         ;
