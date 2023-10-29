@@ -13,22 +13,33 @@ final class RouterFactory
 	use Nette\StaticClass;
 
     const NON_ALLOWED_PAGES_TITLES = [
-        "prihlaseni", "registrace", "clanky"
+        "prihlaseni", "registrace", "clanky", "redaktorsky_panel"
     ];
 
 	public static function createRouter(): RouteList
 	{
 		$router = new RouteList;
-		$router->addRoute('/', 'Home:default')
-            ->addRoute("/<page>", "")
-            ->addRoute("/clanky/<article>")
-            ->addRoute("/prihlaseni")
-            ->addRoute("/prihlaseni/odhlasit-se")
-            ->addRoute("/zapomenute-heslo")
-            ->addRoute("/registrace")
+		$router->withModule("Front")->addRoute('/', 'Home:default')
+            ->addRoute("/<page>", "Page:view")
+            ->addRoute("/clanky/<article>", "Article:view")
+            ->addRoute("/clanky/archiv", "Article:archive")
         ;
 
-        $router->withModule("admin")
+		$router->withModule("Front")->withModule("Auth")
+            ->addRoute("/prihlaseni", 'Sign:in')
+            ->addRoute("/prihlaseni/odhlasit-se", "Sign:out")
+
+            ->addRoute("/prihlaseni/overeni-emailu/krok-1", "Verification:verify")
+            // add handle for resend
+
+            ->addRoute("/prihlaseni/zapomenute-heslo/step-1", "ResetPassword:request")
+            ->addRoute("/prihlaseni/zapomenute-heslo/step-2", "ResetPassword:verification")
+            ->addRoute("/prihlaseni/zapomenute-heslo/step-3", "ResetPassword:reset")
+            // add handle for resend
+
+            ->addRoute("/registrace", "Register:create");
+
+        $router->withModule("Admin")
             ->addRoute("/redaktorsky-panel", "Overview:home")
 
             ->addRoute("/redaktorsky-panel/nastaveni-webu", "Settings:Main:overview")

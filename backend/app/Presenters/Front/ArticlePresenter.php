@@ -1,7 +1,10 @@
 <?php
 
+namespace App\Presenters\Front;
 
-class ArticlePresenter
+use App\Presenters\FrontBasePresenter;
+
+class ArticlePresenter extends FrontBasePresenter
 {
 
 }
