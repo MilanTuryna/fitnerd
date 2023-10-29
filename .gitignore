@@ -1,5 +1,5 @@
 composer.phar
 /backend/vendor
 .idea
-backend/composer.lock
-config/local.neon
+/backend/composer.lock
+/backend/config/local.neon
